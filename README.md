@@ -1,5 +1,6 @@
 # element-table-column
-> A table-column component for element-ui. --base 2.2.2
+> A table-column component for element-ui. --base 2.3.2  
+新增 showSlot 属性
 
 ## Installation
 ```shell
