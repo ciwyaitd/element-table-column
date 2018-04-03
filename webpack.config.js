@@ -1,9 +1,11 @@
 var webpack = require('webpack')
-var path = require('path')
-
-function resolve(dir) {
-    return path.join(__dirname, '..', dir)
-}
+var version = require('./package.json').version
+var banner =
+  "/**\n" +
+  " * element-table-column v" + version + "\n" +
+  " * https://github.com/ciwyaitd/element-table-column\n" +
+  " * MIT License\n" +
+  " */\n";
 
 module.exports = {
     output: {
@@ -24,5 +26,10 @@ module.exports = {
                 loader: 'babel-loader'
             }
         ]
-    }
+    },
+    plugins: [
+        new webpack.BannerPlugin(banner, {
+            raw: true
+        })
+    ],
 }
