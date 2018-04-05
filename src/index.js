@@ -421,7 +421,7 @@ export default {
         owner.store.commit('insertColumn', this.columnConfig, columnIndex, this.isSubColumn ? parent.columnConfig : null);
     },
 
-    install(Vue) {
-        Vue.components(this.name, this)
+    install(Vue, options = {}) {
+        Vue.component(options.name || this.name, this)
     }
 };
